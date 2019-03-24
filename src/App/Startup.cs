@@ -110,6 +110,12 @@ namespace App
                 app.UseDeveloperExceptionPage();
             }
 
+            // should load setting as
+            // https://github.com/blogifierdotnet/Blogifier/blob/master/src/App/Program.cs#L37-L38
+            AppSettings.ImageExtensions = "png,jpg,gif,bmp,tif,jpeg";
+            AppSettings.ImportTypes = "zip,7z,xml,pdf,doc,docx,xls,xlsx,mp3,avi";
+            AppSettings.Avatar = "lib/img/avatar.jpg";
+
             app.UseCookiePolicy();
             app.UseAuthentication();
             app.UseStaticFiles();
